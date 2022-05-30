@@ -27,14 +27,14 @@ class Hastane():
                 cycle = False
 
     def hastaKayit(self):
-<<<<<<< HEAD
+
         tc = input("Hasta tcsi: ")
         soyad = input("Hasta soyismi: ")
         hasta = Patient(tc,soyad)
         print(hasta)
-=======
-       pass
->>>>>>> eac69d73f01420161c45d544d1c7ea7cc5c0b200
+
+       
+
     def kayitSil(self):
         pass
     def showAllRecords(self):
