@@ -24,7 +24,7 @@ class Hastane():
         soyad = input("Hasta soyismi: ")
         hasta = Patient(tc,soyad)
         print(hasta)
-    def kayitSil(self):
+    def hastaSil(self):
         pass
 
 hastane = Hastane("Bunyamin Hastanesi") # obje tanımlaması
