@@ -1,34 +1,51 @@
-from cmath import e
-from Patiant import Patient
+import pandas as pd
+from Person import Person
 
 class Hastane():
-                            #Liste olusturulacak 
-    def __init__ (self,ad):
-        self.ad = ad
-        self.calisma = True # her zaman çalışır durumda sağlamak için
-    def program(self):
-        secim = self.menuSecim()
+    def __init__(self):
+        print("Hastanemize hosgeldiniz")
+        self.__recordList = {}
 
     def menuSecim(self):
-        while True: # seçim istenilen aralığın dışında kalmaması için önlem
+        cycle = True
+
+        while cycle:
             try:
-                secim = int(input("**** {} hastahenemize hos geldiniz\n\n1-Hasta Kayit\n2-Hasta Sil\n\nSecimizi Giriniz : ".format(self.ad))) # istenen deger tam sayı olması saglandı
-            except ValueError:
-                print("Lutfen gecerli bir deger giriniz.")
-            
-            if secim == 1:
+                secim = input("ekle : 1\nsil : 2\ngoster : 3\nLutfen yapmak istediginiz islemi secin: ").strip()
+                while not (secim.isnumeric()) or int(secim) > 4 or int(secim) < 1:
+                    secim = input("Gecersiz bir komut girildi, tekrar deneyin: ").strip()
+            except Exception as e:
+                print("Oops! ", e.__class__, " hatasi meydana geldi!")
+            if secim == '1':
                 self.hastaKayit()
-                    
+            elif secim == '2':
+                self.kayitSil()
+            elif secim == '3':
+                self.showAllRecords()
+            else:
+                print("Otomasyondan cikiliyor...")
+                cycle = False
+
     def hastaKayit(self):
+<<<<<<< HEAD
         tc = input("Hasta tcsi: ")
         soyad = input("Hasta soyismi: ")
         hasta = Patient(tc,soyad)
         print(hasta)
-    def hastaSil(self):
+=======
+       pass
+>>>>>>> eac69d73f01420161c45d544d1c7ea7cc5c0b200
+    def kayitSil(self):
         pass
+    def showAllRecords(self):
+        pass
+    def hastaKontrol(self, no):
+       pass
 
-hastane = Hastane("Bunyamin Hastanesi") # obje tanımlaması
 
-while True: # true deger alarak çalışır durumda tutmak için
-    hastane.program()
-    asdfglajglj
+    @property
+    #def recordList(self):
+        
+
+    @recordList.setter
+    #def recordList(self, value):
