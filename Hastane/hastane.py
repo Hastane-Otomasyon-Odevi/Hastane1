@@ -31,3 +31,4 @@ hastane = Hastane("Bunyamin Hastanesi") # obje tanımlaması
 
 while True: # true deger alarak çalışır durumda tutmak için
     hastane.program()
+    asdfglajglj
