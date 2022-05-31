@@ -27,28 +27,28 @@ class Hastane():   #Hastane class'i olusturuldu.
                 cycle = False   #Cycle degeri false olur.
 
     def hastaKayit(self):   #Hasta kayıt fonksiyonu oluşturuldu.
-        tc = input("Hastanin tc'sini giriniz: ")
-        while not(tc.isnumeric()) or len(tc) < 11 or len(tc) > 11:
-            tc = input("Hastanin 11 haneli tc'sini giriniz: ")
+        tc = input("Hastanin tc'sini giriniz: ")   #input ile hastanın kimlik numarası alındı ve tc'ye kaydedildi.
+        while not(tc.isnumeric()) or len(tc) < 11 or len(tc) > 11:  #while döngüsü ile kimlik numarasının 11 haneli ve sadece numaralardan oluşması koşullandırıldı.
+            tc = input("Hastanin 11 haneli tc'sini giriniz: ")   #eğer 11 haneli değilse input ile tekrardan 11 haneli kimlik numarası istenir.
 
-        soyIsim = input("Soyismi giriniz:")
-        while not(soyIsim.isalpha()):
-            soyIsim = input("Soyisim rakam veya baska bir karakter iceremez tekrar deneyiniz: ")
-            print()
+        soyIsim = input("Soyismi giriniz:")   #input ile hastanın soyismi alındı ve soyisim olarak kaydedildi.
+        while not(soyIsim.isalpha()):    #soyismin sadece harflerden oluşması koşullandırıldı.
+            soyIsim = input("Soyisim rakam veya baska bir karakter iceremez tekrar deneyiniz: ")   #input ile hastanın soyadı istendi ve soyisim olarak kaydedildi.
+            print()   
 
-        if self.hastaKontrol(tc):
-            self.recordList[tc] = soyIsim
-            print("Hasta sisteme kaydedildi!")
+        if self.hastaKontrol(tc):   #kimlik numarası doğru ise hasta kontrol ve burası çalışır. 
+            self.recordList[tc] = soyIsim   #Self kullanıldı.
+            print("Hasta sisteme kaydedildi!")   #Ekrana yazdırdı.
         else:
-            print("Sistemde bu tc'de kayitli bir hasta var!")
+            print("Sistemde bu tc'de kayitli bir hasta var!")   #Şartlar sağlanmadıysa bu satır yazdırıldı.
 
 
     def kayitSil(self):   #Seçime göre kayıt silme fonksiyonu çalışır.
-        delTc = input("Silinmek istenen hastanin tc si :")
-        if not (self.hastaKontrol(delTc)):
-            self.recordList.pop(delTc)
+        delTc = input("Silinmek istenen hastanin tc si :")   #input ile kayıdı silinmek istenen hastanın kimlik numarası delTc olarak kaydedildi.
+        if not (self.hastaKontrol(delTc)):   #Kayıt silinmek istenirse çalışacak self parametresi.
+            self.recordList.pop(delTc)  #self kullanıldı.
         else:
-            print("Boyle bir kayit bulunamadi!")
+            print("Boyle bir kayit bulunamadi!")   #yukarıdaki blok çalışmaz ise ekrana kayıt bulunamadı ve tekrar kontrol edebilirisiniz yazdıdır. 
             print("Tekrar Kontrol Edebilirsiniz")
 
     def showAllRecords(self):   #Seçime göre showAllRecords fonksiyonu çalışır.
