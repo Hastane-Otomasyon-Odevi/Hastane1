@@ -16,16 +16,16 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
 
 
-
     def randevuAl(self):
-        cycle = True # while dongusune girebilmesi icin True olarak atama yaptik.
-        while cycle: #cycle atadigimiz degerden dolayi while dongusune dondu.
-            print("Giris yapmak icin : 1") # giris yapmak icin 1 rakamina basilir.
-            print("Kayit olmak icin : 2")  # kayit olmak icin 2 rakamina basilir.
+        while self.cycle: # while dongusune girebilmesi icin True olarak atama yaptik.
+            if self.oturumAcma == False: #cycle atadigimiz degerden dolayi while dongusune dondu.
+                print("Giris yapmak icin : 1") # giris yapmak icin 1 rakamina basilir.
+                print("Kayit olmak icin : 2")  # kayit olmak icin 2 rakamina basilir.
+            print("Cikmak icin : 5")       # cikis yapmak icin 5 rakamina basilir.
             print("Randevu almak icin : 3")# randevu almak icin 3 rakamina basilir.
             print("Logout icin : 4")       # hasta oturumunu sonlandirmak icin 4 rakamina basilir.
-            print("Cikmak icin : 5")       # cikis yapmak icin 5 rakamina basilir.
             print("Bizi seçtiginiz icin tesekkürler")  # ekrana kucuk bir bilgilendirme notu ekledik.
+            print()
             choose = int(input("Yapmak istediginiz islem :  ")) # yapmak istedigi islemi secmek icin input ve choose'a kayit aldik.
 
             if self.oturumAcma == True and choose == 1:
