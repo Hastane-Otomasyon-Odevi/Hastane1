@@ -20,18 +20,18 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
             if self.oturumAcma == True and choose == 1:
                 print("Yeni bir oturum acmadan once oturumunuzu kapatiniz.")
-            if choose == 1 and (not self.oturumAcma): 
+            if choose == 1 and (not self.oturumAcma): # kullanıcı 1 girdisi girerse oturum açma işlemi çalışır.
                 self.giris()
-            if choose == 2:
+            if choose == 2:                           # kullanıcı 2 girdisi girerse yeni kayıt açma işlemi çalışır.
                 self.yeniKayit()
-            if choose == 3:
+            if choose == 3:                           # kullancı 3 girdisi girerse hastalık secimi işlemi çalışır.
                 self.hastalikSecimi()
-            if choose == 4:
+            if choose == 4:                           # kullanıcı 4 girdisi girerse gecmis olsun yazısı çalışır.
                 print("Gecmis olsun")
                 cycle = False
-            if choose == 5:
+            if choose == 5:                           # kullanıcı 5 girdisi girerse tüm kayıtları gösterir.
                 self.kayit.showAllRecords()
-            if choose == 6:
+            if choose == 6:                           # kullanıcı 6 girdisi girerse oluşturulan kayıt silinir.
                 self.kayit.kayitSil()
 
             print()
