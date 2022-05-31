@@ -1,5 +1,5 @@
-import pandas as pd
-from Person import Person
+import pandas as pd   #Awesome Python kütüphanesinin kullanımı zorunlu olduğu için pandas'ı kullandık.
+from Person import Person    #Person'dan veri çekebilmek için kullandık.
 
 class Hastane():
     def __init__(self):
