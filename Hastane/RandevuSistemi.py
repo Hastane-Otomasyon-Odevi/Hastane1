@@ -1,5 +1,4 @@
-import pandas as pd
-
+import pandas as pd # awesome python kutuphanesi zorunlu oldugu icin kullandik
 from Menu import Hastane
 
 class GirisEkrani():
