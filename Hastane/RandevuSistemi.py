@@ -10,11 +10,11 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
     def randevuAl(self):
         cycle = True # while dongusune girebilmesi icin True olarak atama yaptik.
         while cycle: #cycle atadigimiz degerden dolayi while dongusune dondu.
-            print("Giris yapmak icin : 1") # giriş yapmak için 1 rakamına basılır.
-            print("Kayit olmak icin : 2")  # kayıt olmak için 2 rakamına basılır.
-            print("Randevu almak icin : 3")# randevu almak için 3 rakamına basılır.
-            print("Logout icin : 4")       # hasta oturumunu sonlandırmak için 4 rakamına basılır
-            print("Cikmak icin : 5")       # çıkış yapmak için 5 rakamına basılır.
+            print("Giris yapmak icin : 1") # giris yapmak icin 1 rakamina basilir.
+            print("Kayit olmak icin : 2")  # kayit olmak icin 2 rakamina basilir.
+            print("Randevu almak icin : 3")# randevu almak icin 3 rakamina basilir.
+            print("Logout icin : 4")       # hasta oturumunu sonlandirmak icin 4 rakamina basilir.
+            print("Cikmak icin : 5")       # cikis yapmak icin 5 rakamına basılır.
             print("Bizi seçtiginiz icin tesekkürler")  # ekrana küçük bir bilgilendirme notu ekledik.
             choose = int(input("Yapmak istediginiz islem :  ")) # yapmak istediği işlemi seçmek için input ve choose'a kayıt aldık.
 
