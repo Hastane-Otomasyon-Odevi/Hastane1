@@ -1,30 +1,30 @@
-import pandas as pd   #Awesome Python kütüphanesinin kullanımı zorunlu olduğu için pandas'ı kullandık.
-from Person import Person   #Person'dan veri çekebilmek için kullandık.
+import pandas as pd   #Awesome Python kutuphanesinin kullanimi zorunlu oldugu icin pandas'i kullandik.
+from Person import Person   #Person'dan veri cekebilmek icin kullandik.
 
-class Hastane():   #Hastane class'ı oluşturuldu.
+class Hastane():   #Hastane class'i olusturuldu.
     def __init__(self):
         print("Hastanemize hosgeldiniz")
         self.__recordList = {}
 
-    def menuSecim(self):   #Menü seçim fonksiyonu oluşturuldu
-        cycle = True   #While döngüsüne girebilmesi için True değeri atandı.
+    def menuSecim(self):   #Menu secim fonksiyonu olusturuldu
+        cycle = True   #While dongusune girebilmesi icin True degeri atandi.
 
-        while cycle:   #While döngüsüne girebilmesi için cycle'daki değer değerlendirildi.
+        while cycle:   #While dongusune girebilmesi icin cycle'daki deger degerlendirildi.
             try:
-                secim = input("ekle : 1\nsil : 2\ngoster : 3\nLutfen yapmak istediginiz islemi secin: ").strip()   #Seçim yapılabilmesi için input değer alındı, .strip metoduyla boşluklar silindi.
-                while not (secim.isnumeric()) or int(secim) > 4 or int(secim) < 1:   #Seçimin sadece numaralardan ve istenilen aralıkta olması istendi ve while ile döngü kontrolü yapıldı.
-                    secim = input("Gecersiz bir komut girildi, tekrar deneyin: ").strip()   #input ile değer alınmak istendi, seçime kayıt edildi ve .strip ile boşlukları alındı.
+                secim = input("ekle : 1\nsil : 2\ngoster : 3\nLutfen yapmak istediginiz islemi secin: ").strip()   #Secim yapilabilmesi icin input deger alindi, .strip metoduyla boşluklar silindi.
+                while not (secim.isnumeric()) or int(secim) > 4 or int(secim) < 1:   #Secimin sadece numaralardan ve istenilen aralikta olmasi istendi ve while ile dongu kontrolu yapıldı.
+                    secim = input("Gecersiz bir komut girildi, tekrar deneyin: ").strip()   #input ile deger alinmak istendi, secime kayit edildi ve strip ile bosluklari alindi.
             except Exception as e: 
-                print("Oops! ", e.__class__, " hatasi meydana geldi!")   #Meydana gelen hatayı ekrana yazdırmak için except kullanıldı.
-            if secim == '1':  #Eğer seçimden gelen değer 1 ise Hasta kaydı oluşturlacak.
+                print("Oops! ", e.__class__, " hatasi meydana geldi!")   #Meydana gelen hatayi ekrana yazdirmak icin except kullanildi.
+            if secim == '1':  #Eger secimden gelen deger 1 ise Hasta kaydi olusturulacak.
                 self.hastaKayit()
-            elif secim == '2':   #Eğer seçimden gelen değer 2 ise Hasta kaydı silinecek.
+            elif secim == '2':   #Eger secimden gelen deger 2 ise Hasta kaydi silinecek.
                 self.kayitSil()
-            elif secim == '3':   #Eğer seçimden gelen değer 3 ise showAllRecords fonksiyonu çalıştırılacak.
+            elif secim == '3':   #Eger secimden gelen deger 3 ise showAllRecords fonksiyonu calistirilacak.
                 self.showAllRecords()
-            else:   #Seçim istenilen değeri girilmezse else çalışır.
-                print("Otomasyondan cikiliyor...")   #Ekrana 'Otomasyondan çıkılıyor yazdırır.
-                cycle = False   #Cycle değeri false olur.
+            else:   #Secim istenilen degeri girilmezse else calisir.
+                print("Otomasyondan cikiliyor...")   #Ekrana 'Otomasyondan cikiliyor yazdirir.
+                cycle = False   #Cycle degeri false olur.
 
     def hastaKayit(self):   #Hasta kayıt fonksiyonu oluşturuldu.
 
