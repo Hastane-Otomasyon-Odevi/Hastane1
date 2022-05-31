@@ -27,16 +27,30 @@ class Hastane():   #Hastane class'i olusturuldu.
                 cycle = False   #Cycle degeri false olur.
 
     def hastaKayit(self):   #Hasta kayıt fonksiyonu oluşturuldu.
+        tc = input("Hastanin tc'sini giriniz: ")
+        while not(tc.isnumeric()) or len(tc) < 11 or len(tc) > 11:
+            tc = input("Hastanin 11 haneli tc'sini giriniz: ")
 
-        tc = input("Hasta tcsi: ")   #Hastanın kimlik numarası alındı.
-        soyad = input("Hasta soyismi: ")   #Hastanın soyadı alındı.
-        hasta = Patient(tc,soyad)   #Hasta verileri hasta değişkenine kaydediliyor.
-        print(hasta)   #Hasta değişkenlerini ekrana yazdırır.
+        soyIsim = input("Soyismi giriniz:")
+        while not(soyIsim.isalpha()):
+            soyIsim = input("Soyisim rakam veya baska bir karakter iceremez tekrar deneyiniz: ")
+            print()
 
-       
+        if self.hastaKontrol(tc):
+            self.recordList[tc] = soyIsim
+            print("Hasta sisteme kaydedildi!")
+        else:
+            print("Sistemde bu tc'de kayitli bir hasta var!")
+
 
     def kayitSil(self):   #Seçime göre kayıt silme fonksiyonu çalışır.
-        pass
+        delTc = input("Silinmek istenen hastanin tc si :")
+        if not (self.hastaKontrol(delTc)):
+            self.recordList.pop(delTc)
+        else:
+            print("Boyle bir kayit bulunamadi!")
+            print("Tekrar Kontrol Edebilirsiniz")
+
     def showAllRecords(self):   #Seçime göre showAllRecords fonksiyonu çalışır.
         pass
     def hastaKontrol(self, no):   #Seçime göre hasta kontrol fonksiyoru çalışır.
