@@ -10,7 +10,7 @@ class GirisEkrani():
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
 
     def randevuAl(self):
-        cycle = True
+        cycle = True # while dongusune girebilmesi icin True olarak atama yaptik
         while cycle:
             print("Giris yapmak icin : 1")
             print("Kayit olmak icin : 2")
