@@ -1,7 +1,7 @@
-import pandas as pd # awesome python kutuphanesi zorunlu oldugu icin kullandik
-from Menu import Hastane
+import pandas as pd # awesome python kutuphanesi zorunlu oldugu icin pandasi kullandik.
+from hastane import Hastane # menu ve hastandeki verileri cekebilmek icin birlikte kullandik.
 
-class GirisEkrani():
+class GirisEkrani():   #
     def __init__(self):
         print("Randevu sistemine hos geldiniz")
         self.oturumAcma = False
@@ -10,7 +10,7 @@ class GirisEkrani():
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
 
     def randevuAl(self):
-        cycle = True # while dongusune girebilmesi icin True olarak atama yaptik
+        cycle = True # while dongusune girebilmesi icin True olarak atama yaptik.
         while cycle:
             print("Giris yapmak icin : 1")
             print("Kayit olmak icin : 2")
