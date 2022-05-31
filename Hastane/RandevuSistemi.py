@@ -100,6 +100,3 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
     def logOut(self):
         print("Oturum kapatiliyor!! Gule gule") # logOut(cikis) ekraninin  calismasi icin logOut fonksiyonu calistirildi.
         self.oturumAcma = False
-
-    #def guncel(self):
-    #   pass
