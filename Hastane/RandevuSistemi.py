@@ -20,33 +20,33 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
             if self.oturumAcma == True and choose == 1:
                 print("Yeni bir oturum acmadan once oturumunuzu kapatiniz.")
-            if choose == 1 and (not self.oturumAcma): # kullanıcı 1 girdisi girerse oturum açma işlemi çalışır.
+            if choose == 1 and (not self.oturumAcma): # kullanici  1 girdisi girerse oturum acma islemi calisir.
                 self.giris()
-            if choose == 2:                           # kullanıcı 2 girdisi girerse yeni kayıt açma işlemi çalışır.
+            if choose == 2:                           # kullanici 2 girdisi girerse yeni kayit acma islemi calisir.
                 self.yeniKayit()
-            if choose == 3:                           # kullancı 3 girdisi girerse hastalık secimi işlemi çalışır.
+            if choose == 3:                           # kullanci 3 girdisi girerse hastalik secimi islemi calisir.
                 self.hastalikSecimi()
-            if choose == 4:                           # kullanıcı 4 girdisi girerse gecmis olsun yazısı çalışır.
+            if choose == 4:                           # kullanici 4 girdisi girerse gecmis olsun yazisi calisir..
                 print("Gecmis olsun")
                 cycle = False
-            if choose == 5:                           # kullanıcı 5 girdisi girerse tüm kayıtları gösterir.
+            if choose == 5:                           # kullanici 5 girdisi girerse tum kayitlari gosterir.
                 self.kayit.showAllRecords()
-            if choose == 6:                           # kullanıcı 6 girdisi girerse oluşturulan kayıt silinir.
+            if choose == 6:                           # kullanici 6 girdisi girerse olusturulan kayit silinir.
                 self.kayit.kayitSil()
 
             print()
 
-    def giris(self): # giriş ekranının çalışması için giriş fonksiyonu çalıştırıldı.
+    def giris(self): # giris eekraninin calismasi icin ggiris fonksiyonu calistirildi.
         pass
 
-    def yeniKayit(self): # yeni kayıt ekranın çalışması için yeni kayıt fonksiyonu çalıştırıldı.
+    def yeniKayit(self): # yeni kayit ekraninin calismasi icin yeni kayit fonksiyonu calistirildi.
         pass
 
-    def hastalikSecimi(self): # hastalık seçimi ekranının çalışması için hastalık seçimi fonksiyonuçalıştırıldı. 
+    def hastalikSecimi(self): # hastalik secimi ekraninin  ccalismasi icin hastalik secimi fonksiyonu calistirildi. 
         pass
 
     def logOut(self):
-        print("Oturum kapatiliyor!! Gule gule") # logOut(çıkış) ekranının çalışması için logOut fonksiyonu çalıştırıldı.
+        print("Oturum kapatiliyor!! Gule gule") # logOut(cikis) ekraninin  calismasi icin logOut fonksiyonu calistirildi.
         self.oturumAcma = False
 
     def guncel(self):
