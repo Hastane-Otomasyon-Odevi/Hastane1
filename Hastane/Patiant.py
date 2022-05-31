@@ -5,3 +5,6 @@ class Patient():
     
     def __str__(self):
         return "Hasta tc :{}\nHasta soyisim :{}".format(self.Tc,self.soyisim)
+
+    def guncelS(self):
+        pass
