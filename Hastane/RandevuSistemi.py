@@ -54,3 +54,5 @@ class GirisEkrani():
         print("Oturum kapatiliyor!! Gule gule")
         self.oturumAcma = False
 
+    def guncel(self):
+        pass
