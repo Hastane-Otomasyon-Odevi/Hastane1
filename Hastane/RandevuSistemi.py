@@ -36,17 +36,17 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
             print()
 
-    def giris(self):
+    def giris(self): # giriş ekranının çalışması için giriş fonksiyonu çalıştırıldı.
         pass
 
-    def yeniKayit(self):
+    def yeniKayit(self): # yeni kayıt ekranın çalışması için yeni kayıt fonksiyonu çalıştırıldı.
         pass
 
-    def hastalikSecimi(self):
+    def hastalikSecimi(self): # hastalık seçimi ekranının çalışması için hastalık seçimi fonksiyonuçalıştırıldı. 
         pass
 
     def logOut(self):
-        print("Oturum kapatiliyor!! Gule gule")
+        print("Oturum kapatiliyor!! Gule gule") # logOut(çıkış) ekranının çalışması için logOut fonksiyonu çalıştırıldı.
         self.oturumAcma = False
 
     def guncel(self):
