@@ -5,7 +5,14 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
     def __init__(self):
         print("Randevu sistemine hos geldiniz")
         self.oturumAcma = False #acildgi gibi calismamasi icin false olarak atandi
+        self.cycle = True
         self.kayit = Hastane()
+        self. doctors = ["Hakan Tasiyan", "Muslum Gurses", "Esengul", "Bergen"]
+        self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji"]
+        self.vaccine = ["Turcovac","Biontech","Sinovac"]
+        
+        self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
+
 
     def randevuAl(self):
         cycle = True # while dongusune girebilmesi icin True olarak atama yaptik.
