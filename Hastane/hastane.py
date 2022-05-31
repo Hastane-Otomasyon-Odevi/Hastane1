@@ -58,8 +58,8 @@ class Hastane():   #Hastane class'i olusturuldu.
 
 
     @property   #Getter Setter metodu kullanılmaya çalışıldı.
-    #def recordList(self):
+    def recordList(self):
         
 
     @recordList.setter   #Getter Setter metodu kullanılmaya çalışıldı.
-    #def recordList(self, value):
+    def recordList(self, value):
