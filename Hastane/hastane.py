@@ -52,9 +52,14 @@ class Hastane():   #Hastane class'i olusturuldu.
             print("Tekrar Kontrol Edebilirsiniz")
 
     def showAllRecords(self):   #Seçime göre showAllRecords fonksiyonu çalışır.
-        pass
+        list = pd.Series(self.recordList)   #pandas series kullanılarak liste kaydedildi.
+        print(list)   #list ekrana yazdırıldı.
+
     def hastaKontrol(self, no):   #Seçime göre hasta kontrol fonksiyoru çalışır.
-       pass
+        if no in self.recordList.keys():   #Fonksiyon ile istenilen değer kontrol edildi.
+            return False   #return ile False döndürüldü.
+        else:
+            return True   #eğer False değil ise True döndürüldü.
 
 
     @property   #Getter Setter metodu kullanılmaya çalışıldı.
