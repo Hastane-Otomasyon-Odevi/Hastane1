@@ -64,7 +64,9 @@ class Hastane():   #Hastane class'i olusturuldu.
 
     @property   #Getter Setter metodu kullanılmaya çalışıldı.
     def recordList(self):   #record list fonksiyonu kullanıldı.
-        
+        return self.__recordList   #return ile self recordlist döndürüldü.
+
 
     @recordList.setter   #Getter Setter metodu kullanılmaya çalışıldı.
     def recordList(self, value):   #record list fonksiyonu ile value için çağırıldı.
+        self.__recordList = value   #self ile value değeri kullanıldı.
