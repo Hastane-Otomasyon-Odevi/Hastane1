@@ -26,26 +26,26 @@ class Hastane():   #Hastane class'ı oluşturuldu.
                 print("Otomasyondan cikiliyor...")   #Ekrana 'Otomasyondan çıkılıyor yazdırır.
                 cycle = False   #Cycle değeri false olur.
 
-    def hastaKayit(self):
+    def hastaKayit(self):   #Hasta kayıt fonksiyonu oluşturuldu.
 
-        tc = input("Hasta tcsi: ")
-        soyad = input("Hasta soyismi: ")
-        hasta = Patient(tc,soyad)
-        print(hasta)
+        tc = input("Hasta tcsi: ")   #Hastanın kimlik numarası alındı.
+        soyad = input("Hasta soyismi: ")   #Hastanın soyadı alındı.
+        hasta = Patient(tc,soyad)   #Hasta verileri hasta değişkenine kaydediliyor.
+        print(hasta)   #Hasta değişkenlerini ekrana yazdırır.
 
        
 
-    def kayitSil(self):
+    def kayitSil(self):   #Seçime göre kayıt silme fonksiyonu çalışır.
         pass
-    def showAllRecords(self):
+    def showAllRecords(self):   #Seçime göre showAllRecords fonksiyonu çalışır.
         pass
-    def hastaKontrol(self, no):
+    def hastaKontrol(self, no):   #Seçime göre hasta kontrol fonksiyoru çalışır.
        pass
 
 
-    @property
+    @property   #Getter Setter metodu kullanılmaya çalışıldı.
     #def recordList(self):
         
 
-    @recordList.setter
+    @recordList.setter   #Getter Setter metodu kullanılmaya çalışıldı.
     #def recordList(self, value):
