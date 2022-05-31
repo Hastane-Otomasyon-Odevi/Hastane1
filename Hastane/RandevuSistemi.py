@@ -1,3 +1,5 @@
+from numpy import choose
+
 import pandas as pd # awesome python kutuphanesi zorunlu oldugu icin pandasi kullandik.
 from hastane import Hastane # menu ve hastandeki verileri cekebilmek icin birlikte kullandik.
 
@@ -15,14 +17,15 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
 
     def randevuAl(self):
-        cycle = True # while dongusune girebilmesi icin True olarak atama yaptik.
-        while cycle: #cycle atadigimiz degerden dolayi while dongusune dondu.
-            print("Giris yapmak icin : 1") # giris yapmak icin 1 rakamina basilir.
-            print("Kayit olmak icin : 2")  # kayit olmak icin 2 rakamina basilir.
+        while self.cycle:
+            if self.oturumAcma == False:
+                print("Giris yapmak icin : 1") # giris yapmak icin 1 rakamina basilir.
+                print("Kayit olmak icin : 2")  # kayit olmak icin 2 rakamina basilir.
+                print("Cikmak icin : 5")       # cikis yapmak icin 5 rakamına basılır.
             print("Randevu almak icin : 3")# randevu almak icin 3 rakamina basilir.
             print("Logout icin : 4")       # hasta oturumunu sonlandirmak icin 4 rakamina basilir.
-            print("Cikmak icin : 5")       # cikis yapmak icin 5 rakamına basılır.
             print("Bizi seçtiginiz icin tesekkürler")  # ekrana küçük bir bilgilendirme notu ekledik.
+            print()
             choose = int(input("Yapmak istediginiz islem :  ")) # yapmak istediği işlemi seçmek için input ve choose'a kayıt aldık.
 
             if self.oturumAcma == True and choose == 1:
@@ -60,7 +63,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
 
     def yeniKayit(self): # yeni kayit ekraninin calismasi icin yeni kayit fonksiyonu calistirildi.
-        pass
+        self.kayit.hastaKayit()
 
     def hastalikSecimi(self): # hastalik secimi ekraninin  ccalismasi icin hastalik secimi fonksiyonu calistirildi. 
         if self.oturumAcma == True:
