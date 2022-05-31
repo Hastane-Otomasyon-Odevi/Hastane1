@@ -42,38 +42,13 @@ class GirisEkrani():
             print()
 
     def giris(self):
-        user = input("Hastanin tc'sini giriniz: ").strip()          # Guvenlik kontrolune gerek yok
-        password = input("Hastanin soyismini giriniz: ").strip()    # Guvenlik kontrolune gerek yok
-
-        if user in self.kayit.recordList.keys():
-            if password == self.kayit.recordList[user]:
-                print("Sisteme basariyla giris yapildi!")
-                self.oturumAcma = True
-            else:
-                print("Sifre yanlis girildi!!")
-        else:
-            print("Bu kayitta bir kullanici bulunamadi!")
-        print()
-
+        pass
 
     def yeniKayit(self):
-        self.kayit.hastaKayit()
+        pass
 
     def hastalikSecimi(self):
-        if self.oturumAcma == True:
-            print("\nHastalik ve Listesi : \n")
-            df = pd.DataFrame.from_dict(self.doctorsDisease)
-            print(df.to_string())
-            secim = input("\nSecmek istediginiz hastaligin kodunu girin: ").strip()
-            while not secim.isnumeric() or int(secim) < 0 or int(secim) > 4:
-                secim = input("Alan kodu en soldaki sutundaki sayisal degerlerdir tekrar deneyiniz: "),
-            print("Randevu bilgileri : ")
-            df_1 = df.iloc[int(secim)]
-            print(df_1.to_string())
-            print("\nRandevunuz basariyla olusturuldu! Gecmis olsun.")
-        else:
-            print("Islem yapmadan once oturum aciniz!!")
-
+        pass
 
     def logOut(self):
         print("Oturum kapatiliyor!! Gule gule")
