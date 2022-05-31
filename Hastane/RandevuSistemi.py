@@ -6,8 +6,6 @@ class GirisEkrani():
         print("Randevu sistemine hos geldiniz")
         self.oturumAcma = False
         self.kayit = Hastane()
-        self. doctors = ["Hakan Tasiyan", "Muslum Gurses", "Esengul", "Bergen"]
-        self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji"]
 
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
 
@@ -19,7 +17,7 @@ class GirisEkrani():
             print("Randevu almak icin : 3")
             print("Logout icin : 4")
             print("Cikmak icin : 5")
-            print()
+            print("Bizi seçtiginiz icin tesekkürler")
             choose = int(input("Yapmak istediginiz islem :  "))
 
             if self.oturumAcma == True and choose == 1:
