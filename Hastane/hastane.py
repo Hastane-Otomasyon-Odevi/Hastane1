@@ -13,18 +13,18 @@ class Hastane():   #Hastane class'ı oluşturuldu.
             try:
                 secim = input("ekle : 1\nsil : 2\ngoster : 3\nLutfen yapmak istediginiz islemi secin: ").strip()   #Seçim yapılabilmesi için input değer alındı, .strip metoduyla boşluklar silindi.
                 while not (secim.isnumeric()) or int(secim) > 4 or int(secim) < 1:   #Seçimin sadece numaralardan ve istenilen aralıkta olması istendi ve while ile döngü kontrolü yapıldı.
-                    secim = input("Gecersiz bir komut girildi, tekrar deneyin: ").strip()   
-            except Exception as e:
-                print("Oops! ", e.__class__, " hatasi meydana geldi!")
-            if secim == '1':
+                    secim = input("Gecersiz bir komut girildi, tekrar deneyin: ").strip()   #input ile değer alınmak istendi, seçime kayıt edildi ve .strip ile boşlukları alındı.
+            except Exception as e: 
+                print("Oops! ", e.__class__, " hatasi meydana geldi!")   #Meydana gelen hatayı ekrana yazdırmak için except kullanıldı.
+            if secim == '1':  #Eğer seçimden gelen değer 1 ise Hasta kaydı oluşturlacak.
                 self.hastaKayit()
-            elif secim == '2':
+            elif secim == '2':   #Eğer seçimden gelen değer 2 ise Hasta kaydı silinecek.
                 self.kayitSil()
-            elif secim == '3':
+            elif secim == '3':   #Eğer seçimden gelen değer 3 ise showAllRecords fonksiyonu çalıştırılacak.
                 self.showAllRecords()
-            else:
-                print("Otomasyondan cikiliyor...")
-                cycle = False
+            else:   #Seçim istenilen değeri girilmezse else çalışır.
+                print("Otomasyondan cikiliyor...")   #Ekrana 'Otomasyondan çıkılıyor yazdırır.
+                cycle = False   #Cycle değeri false olur.
 
     def hastaKayit(self):
 
