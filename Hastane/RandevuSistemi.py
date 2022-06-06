@@ -9,9 +9,9 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
         self.oturumAcma = False #acildgi gibi calismamasi icin false olarak atandi
         self.cycle = True
         self.kayit = Hastane()
-        self. doctors = ["Hakan Tasiyan", "Muslum Gurses", "Esengul", "Bergen","Azer Bulbul"]
-        self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji","Kalp Hastalıkları"]
-        self.vaccine = ["Turcovac","Biontech","Sinovac","Moderna"]
+        self. doctors = ["Hakan Tasiyan", "Muslum Gurses", "Esengul", "Bergen","Azer Bulbul"]  #self ile dokorlar tanımlandı
+        self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji","Kalp Hastalıkları"] #self ile hastaıklar tanımlandı.
+        self.vaccine = ["Turcovac","Biontech","Sinovac","Moderna"]  #self ile aşılar tanımlandı.
         
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors} 
 
