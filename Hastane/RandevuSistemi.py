@@ -11,7 +11,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
         self.kayit = Hastane()
         self. doctors = ["Hakan Tasiyan", "Muslum Gurses", "Esengul", "Bergen","Azer Bulbul"]
         self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji","Kalp Hastalıkları"]
-        self.vaccine = ["Turcovac","Biontech","Sinovac"]
+        self.vaccine = ["Turcovac","Biontech","Sinovac","Moderna"]
         
         self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors} 
 
