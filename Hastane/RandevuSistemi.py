@@ -40,7 +40,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
                 print("Gecmis olsun")
                 self.cycle = False
             if choose == 5:                           # kullanici 5 girdisi girerse tum kayitlari gosterir.
-                self.kayit.showAllRecords()
+                self.cycle = False
             if choose == 6:                           # kullanici 6 girdisi girerse olusturulan kayit silinir.
                 self.kayit.kayitSil()
 
