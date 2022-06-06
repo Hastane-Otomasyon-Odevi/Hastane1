@@ -13,7 +13,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
         self.disease = ["Agiz Dis Cene Cerrahisi", "Deri ve Zuhrevi", "Goz hastaliklari", "Noroloji"]
         self.vaccine = ["Turcovac","Biontech","Sinovac"]
         
-        self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors}
+        self.doctorsDisease = {"Diseases": self.disease, "Doctors": self.doctors} 
 
 
     def randevuAl(self):
