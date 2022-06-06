@@ -5,9 +5,9 @@ class Person:   #Person class'ı tanımlandı
 
 
     @property   #getter setter metodu kullanıldı.
-    def tc(self):   
-        return self.__tc
+    def tc(self):   #tc self ile fonksiyon olarak tanımlandı.
+        return self.__tc  #return ile tc döndürüldü.
 
     @property   #getter setter metodu kullanıldı.
-    def soyisim(self):
-        return self.__soyisim
+    def soyisim(self):  #soyisim self parametresi ile fonksiyon olarak tanımlandı.
+        return self.__soyisim  #return ile soyisim döndürüldü.
