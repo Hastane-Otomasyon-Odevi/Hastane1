@@ -38,7 +38,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
                 self.hastalikSecimi()
             if choose == 4:                           # kullanici 4 girdisi girerse gecmis olsun yazisi calisir..
                 print("Gecmis olsun")
-                cycle = False
+                self.cycle = False
             if choose == 5:                           # kullanici 5 girdisi girerse tum kayitlari gosterir.
                 self.kayit.showAllRecords()
             if choose == 6:                           # kullanici 6 girdisi girerse olusturulan kayit silinir.
@@ -64,7 +64,7 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
         self.kayit.hastaKayit()
     def hastalikSecimi(self): # hastalik secimi ekraninin  ccalismasi icin hastalik secimi fonksiyonu calistirildi. 
         if self.oturumAcma == True:
-            print("Doktor randevusu mu asi randevus mu?")
+            print("Doktor randevusu mu asi randevusu mu?")
             choose = input("Asi icin : 1\nDoktor randevusu icin : 2\nSeçiminizi Giriniz : ").strip()
             while not choose.isnumeric():
                 choose = input("Gecerli formatta bir secim giriniz: ")
