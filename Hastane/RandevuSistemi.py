@@ -63,20 +63,20 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
     def yeniKayit(self): # yeni kayit ekraninin calismasi icin yeni kayit fonksiyonu calistirildi.
         self.kayit.hastaKayit()
     def hastalikSecimi(self): # hastalik secimi ekraninin  ccalismasi icin hastalik secimi fonksiyonu calistirildi. 
-        if self.oturumAcma == True:
+        if self.oturumAcma == True: # kod bloğunun çalışması için oturumacma True olarak atandı
             print("Doktor randevusu mu asi randevusu mu?")
-            choose = input("Asi icin : 1\nDoktor randevusu icin : 2\nSeçiminizi Giriniz : ").strip()
-            while not choose.isnumeric():
+            choose = input("Asi icin : 1\nDoktor randevusu icin : 2\nSeçiminizi Giriniz : ").strip() # input ile kullanıcıdan veri alındı .strip() ile düzenleme yapıldı
+            while not choose.isnumeric(): # döngüye girebilmesi için sadece numaradan oluşması şartı kullanıldı
                 choose = input("Gecerli formatta bir secim giriniz: ")
             if choose == '2':
                 print("\nHastalik ve Listesi : \n")
-                df = pd.DataFrame.from_dict(self.doctorsDisease)
-                print(df.to_string())
-                secim = input("\nSecmek istediginiz hastaligin kodunu girin: ").strip()
+                df = pd.DataFrame.from_dict(self.doctorsDisease) # awesome python kütüphanesi pandas ile doktor hastalık eşleştirmesi yapılmaya çalışıldı
+                print(df.to_string()) # pandas ile veriyi string e çevirdim
+                secim = input("\nSecmek istediginiz hastaligin kodunu girin: ").strip() # input ile kullanıcıdan veri alındı .strip() ile düzenleme yapıldı
                 while not secim.isnumeric() or int(secim) < 0 or int(secim) > 4:
                     secim = input("Alan kodu en soldaki sutundaki sayisal degerlerdir tekrar deneyiniz: "),
                 print("Randevu bilgileri : ")
-                df_1 = df.iloc[int(secim)]
+                df_1 = df.iloc[int(secim)] 
                 print(df_1.to_string())
                 print("\nRandevunuz basariyla olusturuldu! Gecmis olsun.")
                 self.cycle = False
@@ -99,4 +99,4 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
 
     def logOut(self):
         print("Oturum kapatiliyor!! Gule gule") # logOut(cikis) ekraninin  calismasi icin logOut fonksiyonu calistirildi.
-        self.oturumAcma = False
+        self.oturumAcma = False # Sistemin kapatılması için oturumacma False olarak atanıyor
