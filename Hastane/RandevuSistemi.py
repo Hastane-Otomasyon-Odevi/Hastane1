@@ -73,25 +73,25 @@ class GirisEkrani():   #giris ekrani olusturmak icin bir class tanimladik.
                 df = pd.DataFrame.from_dict(self.doctorsDisease) # awesome python kütüphanesi pandas ile doktor hastalık eşleştirmesi yapılmaya çalışıldı
                 print(df.to_string()) # pandas ile veriyi string e çevirdim
                 secim = input("\nSecmek istediginiz hastaligin kodunu girin: ").strip() # input ile kullanıcıdan veri alındı .strip() ile düzenleme yapıldı
-                while not secim.isnumeric() or int(secim) < 0 or int(secim) > 4:
-                    secim = input("Alan kodu en soldaki sutundaki sayisal degerlerdir tekrar deneyiniz: "),
+                while not secim.isnumeric() or int(secim) < 0 or int(secim) > 4: # seçim belli aralıkta olması istendi ve input sadece sayıdan oluşmalı
+                    secim = input("Alan kodu en soldaki sutundaki sayisal degerlerdir tekrar deneyiniz: ")
                 print("Randevu bilgileri : ")
-                df_1 = df.iloc[int(secim)] 
-                print(df_1.to_string())
+                df_1 = df.iloc[int(secim)]  # pandas kütüphanesinde satır sütün düzeni saglamak için
+                print(df_1.to_string()) # pandas ile veriyi string e çevirdim
                 print("\nRandevunuz basariyla olusturuldu! Gecmis olsun.")
-                self.cycle = False
+                self.cycle = False # cycle False olarak atandı
 
             if choose == '1':
                 print()
-                sr = pd.Series(self.vaccine)
-                print(sr.to_string(),end='\n')
+                sr = pd.Series(self.vaccine) # pandas ile veriler kullanıldı
+                print(sr.to_string(),end='\n') # stringler işlenebilir veriye çevirildi
                 secim = input("\nSecmek istediginiz asinin kodunu girin: ").strip()
-                while not secim.isnumeric() or int(secim) < 0 or int(secim) > 3:
+                while not secim.isnumeric() or int(secim) < 0 or int(secim) > 3: # döngüye girebilmesi için input numaradan oluşmalı ve aralıktan büyük olmamalı
                     secim = input("Alan kodu en soldaki sutundaki sayisal degerlerdir tekrar deneyiniz: "),
-                sr2 = sr.iloc[int(secim)]
+                sr2 = sr.iloc[int(secim)] # pandas kütüphanesinde satır sütün düzeni saglamak için
                 print("Randevu bilgileri : ")
                 print(sr2)
-                self.cycle = False
+                self.cycle = False # cycle False olarak atandı
                 print("\nRandevunuz basariyla olusturuldu! Gecmis olsun.")
         else:
             print("Islem yapmadan once oturum aciniz!!")
