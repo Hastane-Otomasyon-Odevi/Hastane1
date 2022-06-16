@@ -12,6 +12,16 @@ NASIL KULLANILIR?
   #Otomasyon üzerinden istenilen branştan istenilen doktor seçilebilmektedir.
   #İlerleyen zamanlarda otomasyonu geliştirip daha kapsamlı bir hale getirmeyi planlıyoruz.
 
+  
+
+  #Ödevi Yapanlar:
+  Bünyamin Şensoy
+  Kurtuluş Güzelgün
+  Sinem Özen
+
+
+  #Uludağ Mekatronik.
+
    
 
  
