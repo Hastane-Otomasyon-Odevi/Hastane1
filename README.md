@@ -10,7 +10,8 @@ NASIL KULLANILIR?
   4-) Kullanıcının karşısına 2 farklı seçenek çıkar. "1" numaralı tuş ile Aşı randevusu, "2" numaralı tuş ile Doktor randevusu temin edebilir.
   
   #Otomasyon üzerinden istenilen branştan istenilen doktor seçilebilmektedir.
-  
+  #İlerleyen zamanlarda otomasyonu geliştirip daha kapsamlı bir hale getirmeyi planlıyoruz.
+
    
 
  
