@@ -8,6 +8,11 @@ NASIL KULLANILIR?
   2-) Sisteme TC Kimlik numarası ve Soyadını kayıt eden kullanıcı daha sonra "1" tuşuna basıp bu bilgileri kullanarak sisteme giriş yapar.
   3-) Bu bölümde ise kullanıcı randevu alabilmek için "3" numaralı tuşa basar.
   4-) Kullanıcının karşısına 2 farklı seçenek çıkar. "1" numaralı tuş ile Aşı randevusu, "2" numaralı tuş ile Doktor randevusu temin edebilir.
+  
+  #Otomasyon üzerinden istenilen branştan istenilen doktor seçilebilmektedir.
+  
+   
+
  
   
  
